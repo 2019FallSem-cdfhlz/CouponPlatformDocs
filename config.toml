@@ -1,6 +1,6 @@
 baseURL = "/"
 languageCode = "en-us"
-title = "Hugo Whisper Theme"
+title = "2019 SEM Doc - by cdfhlz"
 themesDir = "themes"
 theme = "hugo-whisper-theme"
 
@@ -20,7 +20,7 @@ summaryLength = 10
     weight = 1
 
 [[menu.main]]
-    name = "Docs"
+    name = "文档列表"
     url = "/docs/"
     weight = 2
 
