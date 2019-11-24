@@ -35,8 +35,7 @@ git clone git@github.com:2019FallSem-cdfhlz/CouponPlatformDocs.git
    ```shell
     ---
     title: '你的文章名称'
-    date: 2019-02-11T19:27:37+08:00  // 编辑时间
-    weight: 6                        // weight的值最好参考网站上已有的文档中的weight值，越大排得越后
+    date: 2019-02-11T19:27:37+08:00  // 编辑时间，使用搜狗输入法输入"sj"两个字母可以快速输入当前时间
     ---
    ```
 4. 然后在`index.md`中输入文档内容即可
