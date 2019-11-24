@@ -1,7 +1,6 @@
 ---
 title: 'Overview'
 date: 2019-11-24T19:48:24+08:00
-weight: 1
 ---
 
 ## About
