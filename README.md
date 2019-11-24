@@ -22,7 +22,7 @@ git clone git@github.com:2019FallSem-cdfhlz/CouponPlatformDocs.git
 
 然后按照以下步骤（以添加一篇题目为`install-docker`的文章为例）：
 
-> 以下步骤在Windows/Linux平台均可，Windows平台下Markdown编辑器推荐Typora或VSCode:thumbs_up:
+> 以下步骤在Windows/Linux平台均可，Windows平台下Markdown编辑器推荐Typora或VSCode:thumbsup:
 
 1. 在`content/docs`目录下新建一个文件夹`install-docker`（自己操作时，将`install-docker`改成自己要添加的文章名称）
 2. 在刚刚新建的`install-docker`文件夹下新建一个`index.md`文件
@@ -47,6 +47,6 @@ git push
 
 > 建议每次`git add`之前先`git pull`一下，把仓库的更新拉下来。如果对Git工具不太了解可以看[廖雪峰的Git教程](https://www.liaoxuefeng.com/wiki/896043488029600)，或者在群里提问什么的。
 
-:raised_hands: 编辑完文档后尽量检查一下命令的正确性以及表述的清晰程度，**确保你的操作可以被他人直接复现**，也方便写实验报告的同学查阅，提高沟通效率。
+:point_up: 编辑完文档后尽量检查一下命令的正确性以及表述的清晰程度，**确保你的操作可以被他人直接复现**，也方便写实验报告的同学查阅，提高沟通效率。
 
 等待一小段时间后，访问 http://shendianjiao:8080/ 即可查看更新后的文档。
