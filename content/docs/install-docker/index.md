@@ -62,7 +62,10 @@ date: 2019-11-24T20:24:38+08:00
 5. 安装指定版本的 Docker 引擎
 
     ```shell
-    sudo apt-get install docker-ce=5:19.03.5~3-0~ubuntu-bionic docker-ce-cli=5:19.03.5~3-0~ubuntu-bionic containerd.io=1.2.10-3
+    sudo apt-get install \
+    docker-ce=5:19.03.5~3-0~ubuntu-bionic \
+    docker-ce-cli=5:19.03.5~3-0~ubuntu-bionic \
+    containerd.io=1.2.10-3
     ```
 
 6. 测试是否安装成功
