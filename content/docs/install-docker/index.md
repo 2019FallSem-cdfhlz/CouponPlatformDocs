@@ -1,9 +1,9 @@
 ---
-title: '安装 Docker'
+title: 'Ubuntu 18.04 安装 Docker'
 date: 2019-11-24T20:24:38+08:00
 ---
 
-## Ubuntu 18.04 Docker 环境配置
+
 
 本文基于Docker官方文档，按照步骤操作应该能确保正确安装Docker 19.03。<!--more-->
 
