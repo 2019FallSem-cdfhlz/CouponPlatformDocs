@@ -19,9 +19,6 @@
 > 本仓库绑定了两个托管平台，推荐执行第一条`git clone`，是腾讯的代码托管平台，速度比较快。
 
 ```shell
-git clone git@git.code.tencent.com:ffffansz/2019semdoc.git
-
-# 或者（两条执行其中一条即可）
 git clone git@github.com:2019FallSem-cdfhlz/CouponPlatformDocs.git
 ```
 
