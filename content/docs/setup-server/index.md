@@ -7,7 +7,7 @@ date: 2019-11-28T14:38:08+08:00
 
 一般情况下，按顺序执行本文中的命令即可，无需切换当前目录，需要切换目录的地方都有对应的`cd`命令。
 
-## 镜像准备
+### 镜像准备
 
 搭建集群需要用到Node.js和MongoDB的镜像。其中，Node.js使用12.13.1 LTS版本，保证稳定性；MongoDB使用最新的4.2.1版本，如有需要可以调整。
 
@@ -20,7 +20,7 @@ docker image pull mongo:4.2.1-bionic
 
 Node.js镜像选用了基于Alpine 3.10系统构建的，比较轻量；MongoDB则是基于Ubuntu 18.04 （代号Bionic），与运行环境保持一致。
 
-## 容器网络
+### 容器网络
 
 容器间通信依靠Docker network来实现，创建一个名为`coupon-net`的网络：
 
@@ -28,13 +28,13 @@ Node.js镜像选用了基于Alpine 3.10系统构建的，比较轻量；MongoDB�
 docker network create -d bridge coupon-net
 ```
 
-## 拉取服务端代码
+### 拉取服务端代码
 
 ```shell
 git clone https://github.com/2019FallSem-cdfhlz/CouponPlatform.git sem
 ```
 
-## 启动MongoDB容器
+### 启动MongoDB容器
 
 ```shell
 cd sem && \
@@ -49,7 +49,7 @@ docker run -d --rm --name coupon-db --network coupon-net \
 
 容器以后台方式启动，如果要查看其输出，可使用`docker logs coupon-db`。
 
-### TODO
+#### TODO
 
 关于MongoDB的配置可能还需要进一步细化，按照默认配置启动容器报了一个Warning：
 
@@ -58,7 +58,16 @@ docker run -d --rm --name coupon-db --network coupon-net \
 **          See http://dochub.mongodb.org/core/prodnotes-filesystem
 ```
 
-## 启动Node.js容器
+### 启动Node.js容器
+
+启动Node.js容器之前首先需要修改服务端连接数据库的配置，操作方法如下：
+
+1. `vim server/src/config.js`
+2. 按`i`键，进入编辑模式，移动上下左右方向键，定位到`module.exports`的`db`字段
+3. 将`localhost`修改为`coupon-db`
+4. 按下`esc`键，输入`:wq`保存退出
+
+然后启动Node.js容器：
 
 ```shell
 docker run -itd --rm --name coupon-server -p 3000:3000 \
@@ -71,7 +80,7 @@ docker run -itd --rm --name coupon-server -p 3000:3000 \
 
 > 如果启动后发现有报错，请参看仓库主页[README](https://github.com/2019FallSem-cdfhlz/CouponPlatform/blob/master/README.md)的Troubleshooting一节。
 
-## 终止容器
+### 终止容器
 
 以下命令可以终止容器的运行：
 
