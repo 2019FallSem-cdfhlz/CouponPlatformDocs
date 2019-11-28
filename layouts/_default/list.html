@@ -10,7 +10,7 @@
   {{ .Content }}
 </div>
 
-{{ range.Pages }}
+{{ range.Pages.ByDate }}
 {{ .Render "summary" }}
 {{ end }}
 
